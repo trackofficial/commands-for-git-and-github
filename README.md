@@ -24,6 +24,19 @@
 | Статус изменений | git status | Показывает текущие изменения и состояние |
 | Обновление remote | git remote set-url origin <новый URL> | Меняет адрес удалённого репозитория |
 
+
+
+| Шаг | Действие | Команда/Пример |
+|-----|-----------|----------------|
+| 1 | Инициализация Git в корне проекта | `git init` |
+| 2 | Настройка `.gitignore` (чтобы не попадали лишние файлы) | Добавить шаблон для Android:<br>```.gradle<br>/build<br>/.idea<br>local.properties``` |
+| 3 | Добавление файлов в индекс | `git add .` |
+| 4 | Первый коммит | `git commit -m "init: базовый Android проект"` |
+| 5 | Создание удалённого репозитория | На GitHub/GitLab/Bitbucket → «New Repository» |
+| 6 | Привязка локального проекта к удалённому | `git remote add origin https://github.com/username/project.git` |
+| 7 | Проверка подключения | `git remote -v` |
+| 8 | Отправка проекта на сервер | `git branch -M main`<br>`git push -u origin main` |
+| 9 | Дальнейшая работа (после изменений) | `git add .`<br>`git commit -m "feat: добавлен экран настроек"`<br>`git push` |
 ---
 
 ### English Version
